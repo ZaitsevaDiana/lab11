@@ -84,8 +84,7 @@ fun SearchedCommunities(
     modifier: Modifier = Modifier
 ) {
     //TODO Add your code here
-    communities.forEach {
-        Community(
+    communities.forEach { Community(
             text = it,
             modifier = modifier,
             onCommunityClicked = {
@@ -132,6 +131,9 @@ fun ChooseCommunityTopBar(modifier: Modifier = Modifier) {
 @Composable
 fun SearchedCommunitiesPreview(){
     Column {
-        SearchedCommunities(defaultCommunities, null, Modifier)
+        SearchedCommunities(
+            defaultCommunities,
+            null,
+            Modifier)
     }
 }

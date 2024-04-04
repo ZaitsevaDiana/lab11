@@ -17,7 +17,7 @@ class MainViewModelFactory(
         key: String,
         modelClass: Class<T>,
         handle: SavedStateHandle
-    ): T {
-        return MainViewModel(repository) as T
+    ): T & Any {
+        return (MainViewModel(repository) as T)!!
     }
 }
